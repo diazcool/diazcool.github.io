@@ -1,8 +1,100 @@
+/* ~ ~ ~ ~ Fonts ~ ~ ~ ~ */
+
 @font-face {
-	font-family: "montserrat-bold";
-	src: url("../fonts/Montserrat/Montserrat-Bold.otf");
+	font-family: "Cursive Regular";
+	src: url("../fonts/Cursive/Cursive-Decorated.ttf");
+}
+
+@font-face {
+	font-family: "Gogoia Regular";
+	src: url("../fonts/Gogoia/Gogoia-Regular.otf");
+}
+
+/* ~ ~ ~ ~ Colors ~ ~ ~ ~ */
+
+
+@lavender: rgb(230, 230, 255);
+@classic-blue: rgb(72, 145, 206);
+@accessible-blue: rgb(52, 96, 148);
+@jumbo-grey: rgb(198, 190, 181);
+@urban-grey: rgb(100, 100, 105);
+@black: rgb(0, 0, 0);
+@white: rgb(255, 255, 255);
+
+/* ~ ~ ~ ~ General ~ ~ ~ ~ */
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	background-color: @lavender;
+}
+
+.no-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+/* ~ ~ ~ ~ Ask ~ ~ ~ ~ */
+
+.ask-wrap {
+	margin: 150px auto;
+	text-align: center;
+	.no-select;
 }
 
 .ask {
-	font-family: "montserrat-bold";
+	font-family: "Cursive Regular";
+	font-weight: bold;
+	font-size: 60px;
+	color: @urban-grey;
+}
+
+/* ~ ~ ~ ~ Buttons ~ ~ ~ ~ */
+
+#reply-form-wrap {
+	margin: 80px auto 0px;
+	text-align: center;
+	.no-select;
+}
+
+.button {
+	background-color: transparent;
+	outline: none;
+	text-decoration: none;
+	font-family: "Gogoia Regular";
+	font-size: 35px;
+	display: inline-block;
+	padding: 14px 25px 8px;
+	margin: 0px 10px;
+	box-sizing: border-box;
+	border: 5px solid darken(@lavender, 8%);
+	color: @urban-grey;
+	transition: border 300ms, background-color 300ms, color 33ms;
+}
+
+.button:hover {
+	background-color: darken(@lavender, 8%);
+	color: @white;
+	cursor: pointer;
+}
+
+.button:active {
+	background-color: darken(@lavender, 14%);
+	border-color: darken(@lavender, 14%);
+}
+
+#reply-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
 }
